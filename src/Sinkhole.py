@@ -421,8 +421,8 @@ def main():
     #ds = TimeSeriesDataset(X, y)
 
     # Training on dataset where there is a sinkhole formation
-    ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_sinkhole.csv", seq_len=30)
-    val_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_sinkhole.csv", seq_len=30)
+    ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_sinkhole.csv", seq_len=30)
+    val_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_sinkhole.csv", seq_len=30)
 
     # Train/val split
     #val_frac = 0.2
@@ -437,19 +437,19 @@ def main():
     model = train_model(model, cfg, train_ds, val_ds)
     model = train_model(model, cfg, train_ds, val_ds)
     model = train_model(model, cfg, train_ds, val_ds)
-    ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_sinkhole_2.csv", seq_len=20)
-    val_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_sinkhole_2.csv", seq_len=20)
+    ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_sinkhole_2.csv", seq_len=20)
+    val_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_sinkhole_2.csv", seq_len=20)
     train_ds = ds
     model = train_model(model, cfg, train_ds, val_ds)
 
 
     # Training on dataset where there is no sinkhole formation
-    ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_no_sinkhole.csv", seq_len=20)
-    val_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_no_sinkhole.csv", seq_len=20)
+    ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_no_sinkhole.csv", seq_len=20)
+    val_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_no_sinkhole.csv", seq_len=20)
     train_ds = ds
     model = train_model(model, cfg, train_ds, val_ds)
-    ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_no_sinkhole_2.csv", seq_len=10)
-    val_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_train_no_sinkhole_2.csv", seq_len=10)
+    ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_no_sinkhole_2.csv", seq_len=10)
+    val_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_train_no_sinkhole_2.csv", seq_len=10)
     train_ds = ds
     model = train_model(model, cfg, train_ds, val_ds)
     #model = train_model(model, cfg, train_ds, val_ds)
@@ -471,7 +471,7 @@ def main():
 
     #Start : Test the model with a test csv file
     #1. Positive sinkhole test
-    new_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_test_sinkhole.csv", seq_len=30)
+    new_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_test_sinkhole.csv", seq_len=30)
     new_loader = torch.utils.data.DataLoader(new_ds, batch_size=1, shuffle=False)
     with torch.no_grad():
         for X, _ in new_loader:
@@ -484,7 +484,7 @@ def main():
     # for X, y in test_ds_loader:
     #     #X = X.to(device)
     #     logits = model(X)
-    new_ds = CSVDataset("C://Users//rhear//Ritika//SH//data//ball_test_no_sinkhole.csv", seq_len=10)
+    new_ds = CSVDataset("C://Users//Ritika//Ritika//Github//SH//data//ball_test_no_sinkhole.csv", seq_len=10)
     new_loader = torch.utils.data.DataLoader(new_ds, batch_size=1, shuffle=False)
     with torch.no_grad():
         for X, _ in new_loader:
